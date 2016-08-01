@@ -5,7 +5,7 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.sls</groupId>
-    <artifactId>sls-backend</artifactId>
+    <artifactId>storage</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <dependencies>
@@ -19,7 +19,7 @@
         <dependency>
             <groupId>org.nutz</groupId>
             <artifactId>ssdb4j</artifactId>
-            <version>9.2</version>
+            <version>9.4</version>
         </dependency>
         <!-- use java driver of leveldb instead of os specific dependency -->
         <dependency>
