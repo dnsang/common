@@ -8,12 +8,13 @@ import org.nutz.ssdb4j.spi.Response;
 import java.util.ArrayList;
 import java.util.List;
 
+import id.scommon.storage.IKeyValueDB;
 import id.scommon.storage.INoSQLDB;
 
 /**
  * Created by SangDang on 8/1/16.
  */
-public class SSDB implements INoSQLDB {
+public class SSDB implements IKeyValueDB {
   protected String host;
   protected int port;
   protected int timeoutInMs;

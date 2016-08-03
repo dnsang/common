@@ -4,11 +4,13 @@ import org.iq80.leveldb.DB;
 import org.iq80.leveldb.Options;
 import org.iq80.leveldb.WriteBatch;
 
+import id.scommon.storage.IKeyValueDB;
 import id.scommon.storage.INoSQLDB;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import static org.fusesource.leveldbjni.JniDBFactory.*;
@@ -16,7 +18,7 @@ import static org.fusesource.leveldbjni.JniDBFactory.*;
 /**
  * Created by sangdn on 10/12/15. An implement of INoSQLDB using single instance levelDB
  */
-public final class LevelDB implements INoSQLDB {
+public final class LevelDB implements IKeyValueDB {
   protected DB db = null;
   Options opt = null;
   File file;

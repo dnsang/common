@@ -1,18 +1,19 @@
 package id.scommon.storage;
 
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.List;
 
 /**
  * Created by sangdn on 10/5/15.
  */
-public interface INoSQLDB {
-    public boolean put(byte[] key, byte[] value);
-    public int mput(List<byte[]> key, List<byte[]> value);
-    public byte[] get(byte[] key);
-    public List<byte[]> mget(List<byte[]> key);
-    public boolean isExist(byte[] key);
-    public boolean delete(byte[] key);
-    public int mdelete(List<byte[]> key);
+public interface INoSQLDB<K,V> {
+    public boolean put(K key, V value);
+    public int mput(List<K> key, List<V> value);
+    public V get(K key);
+    public List<V> mget(List<K> key);
+    public boolean isExist(K key);
+    public boolean delete(K key);
+    public int mdelete(List<K> key);
     public boolean removeAll();
 }
